@@ -1,0 +1,36 @@
+<!-- views.ejs -->
+ 
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title><%=title%></title>
+    </head>
+    <body>
+        <h1>Mini Message Board</h1>
+        <ul>
+            <%messages.forEach(message => { %>
+                <li><strong><%=message.user %></strong>: <%=message.text %> <%=message.added.toLocaleString() %>
+                
+
+                    <button name="openButton" class="openButton" id="openButton" 
+                    onclick="window.location.href='/messages/<%= message.user %>'"
+                    >Open</button>
+
+                    <!--
+                    <a href="/messages/ <%= message.user %>">Open Message</a>
+                -->
+
+                </li>
+
+
+            <% }) %>
+
+        </ul>
+
+        <a href="/new">Add New Message</a>
+        <a href="/">Back to Home</a>
+    </body>
+  
+</html>

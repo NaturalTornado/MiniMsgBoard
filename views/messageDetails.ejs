@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <p><strong>User:</strong> <%= message.user %></p>
+  <p><strong>Message:</strong> <%= message.text %></p>
+  <p><strong>Added:</strong> <%= message.added.toLocaleString() %></p>
+  
+  <!-- Corrected link to the user's messages -->
+  <a href="/messages/<%= message.user %>">Open Message</a>
+  
+  <br>
+  <a href="/messages">Back to All Messages</a>
+</body>
+</html>

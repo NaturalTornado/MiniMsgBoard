@@ -1,0 +1,37 @@
+<!-- HomePage.ejs -->
+ 
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title>New Message<%= title %></title>
+    </head>
+    <body>
+        <h1>
+            <%=title%>
+        </h1>
+        
+        <form method="POST" action="/new">
+
+        <label for="messageUser">User: </label>
+        <input type="text" id="messageUser" name="messageUser" class="messageUser" >
+
+        <br>
+
+        <label for="messageText">Message: </label>
+        <input type="text" id="messageText" name="messageText" class="messageText">
+
+        <br>
+
+        <button type="submit">submit</button>
+
+        </form>
+
+        <a href="/messages">Message Board</a>
+        
+        <a href="/">Back to Home</a>
+
+    </body>
+  
+</html>
